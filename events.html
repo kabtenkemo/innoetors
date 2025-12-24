@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ar="أحداثنا السابقة - منتدى الابتكار والاستثمار العربي" data-en="Past Events - Arab Innovation and Investment Forum">أحداثنا السابقة</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .events-hero {
+            background: linear-gradient(rgba(220,53,69,0.85), rgba(220,53,69,0.85)), 
+                        url('background.jpeg') center/cover no-repeat;
+            color: white;
+            padding: 200px 0;
+            text-align: center;
+            position: relative;
+        }
+        .events-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+        .events-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            border: 3px solid #ffd700;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(220,53,69,0.2);
+        }
+        body.dark-mode .stat-card {
+            background: #1e1e1e;
+            color: #f0f0f0;
+            border-color: #ff6b7a;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            animation: scaleIn 0.8s ease-out;
+        }
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .stat-text {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 20px;
+            border: 3px solid #ffd700;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: slideUp 0.6s ease-out;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .event-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        body.dark-mode .event-card {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1e1e1e 100%);
+            color: #f0f0f0;
+        }
+        .event-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .event-content {
+            padding: 30px;
+        }
+        .event-year {
+            color: #dc3545;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .event-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #dc3545;
+        }
+        body.dark-mode .event-title {
+            color: #ff6b7a;
+        }
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        .highlight-text {
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo-dark.webp" 
+                     alt="لوجو Innovest - ملتقى الابتكار والاستثمار العربي" 
+                     class="logo-img img-fluid"
+                     >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competition.html" data-ar="المسابقة" data-en="Competition">المسابقة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exhibition.html" data-ar="المعرض" data-en="Exhibition">المعرض</a></li>
+                    <li class="nav-item"><a class="nav-link" href="speakers.html" data-ar="المتحدثون" data-en="Speakers">المتحدثون</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html" data-ar="أحداثنا السابقة" data-en="Past Events">أحداثنا السابقة</a></li>                <li class="nav-item"><a class="nav-link" href="agenda.html" data-ar="الأجندة" data-en="Agenda">الأجندة</a></li>                    <li class="nav-item"><a class="nav-link" href="partners.html" data-ar="الشركاء والداعمين" data-en="Partners & Supporters">الشركاء والداعمين</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ai-forum.html" data-ar="ملتقى الذكاء الاصطناعي" data-en="AI Forum">ملتقى الذكاء الاصطناعي</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><button class="btn-toggle me-3" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+                    <li class="nav-item"><button class="btn btn-outline-light" id="langToggle">English</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="events-hero">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3" data-ar="أحداثنا <span class='highlight-text'>السابقة</span>" data-en="Our <span class='highlight-text'>Past</span> Events">أحداثنا <span class="highlight-text">السابقة</span></h1>
+            <p class="lead fs-3 mb-4" data-ar="رحلة من النجاح والإنجازات في صناعة الابتكار والاستثمار العربي" data-en="A Journey of Success and Achievements in Arab Innovation and Investment">رحلة من النجاح والإنجازات في صناعة الابتكار والاستثمار العربي</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <!-- الإحصائيات -->
+            <div class="text-center mb-5">
+                <h2 class="section-title mb-5" data-ar="إحصائياتنا بالأرقام" data-en="Our Statistics">إحصائياتنا بالأرقام</h2>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-cube"></i></div>
+                        <div class="stat-number" data-ar="4" data-en="4">4</div>
+                        <div class="stat-text" data-ar="نسخة" data-en="Editions">نسخة</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-star"></i></div>
+                        <div class="stat-number" data-ar="18" data-en="18">18</div>
+                        <div class="stat-text" data-ar="فعاليات نوعية على مستوى المنطقة" data-en="Quality Events Across the Region">فعاليات نوعية على مستوى المنطقة</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-number" data-ar="10000+" data-en="10000+">10000+</div>
+                        <div class="stat-text" data-ar="مشارك ومتفاعل عربي" data-en="Arab Participants">مشارك ومتفاعل عربي</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="stat-number" data-ar="100+" data-en="100+">100+</div>
+                        <div class="stat-text" data-ar="مستثمر وشريك متواصل مع المنتدى" data-en="Investors & Partners">مستثمر وشريك متواصل مع المنتدى</div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="stat-number" data-ar="50+" data-en="50+">50+</div>
+                        <div class="stat-text" data-ar="شركات ناشئة تم دعمها وتطويرها" data-en="Supported Startups">شركات ناشئة تم دعمها وتطويرها</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الأحداث السابقة -->
+            <div class="text-center mb-5 mt-5">
+                <h2 class="section-title" data-ar="أحداثنا وفعالياتنا" data-en="Our Events & Activities">أحداثنا وفعالياتنا</h2>
+            </div>
+
+            <!-- النسخة الثالثة -->
+            <div class="event-card">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <img src="https://petra.gov.jo/upload/1761579502111.jpg" alt="قمة الابتكار 2025" class="event-image">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="event-content">
+                            <div class="event-year" data-ar="2025" data-en="2025">2025</div>
+                            <div class="event-title" data-ar="النسخة الثالثة من منتدى الابتكار والاستثمار العربي" data-en="The Third Edition of Arab Innovation Forum">النسخة الثالثة من منتدى الابتكار والاستثمار العربي</div>
+                            <p data-ar="شهدت النسخة الثالثة نجاحاً ملموساً مع إطلاق المنتدى رسمياً في مقر جامعة الدول العربية. تضمنت الفعالية قمة الابتكار والتكنولوجيا للشباب العربي في الأردن، مع مشاركة واسعة من المستثمرين والقيادات الحكومية." 
+                               data-en="The third edition witnessed tangible success with the official launch at the Arab League headquarters. The event included the Arab Youth Innovation and Technology Summit in Jordan, with wide participation from investors and government leaders.">شهدت النسخة الثالثة نجاحاً ملموساً مع إطلاق المنتدى رسمياً في مقر جامعة الدول العربية. تضمنت الفعالية قمة الابتكار والتكنولوجيا للشباب العربي في الأردن، مع مشاركة واسعة من المستثمرين والقيادات الحكومية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- النسخة الثانية -->
+            <div class="event-card">
+                <div class="row g-0 flex-row-reverse">
+                    <div class="col-lg-6">
+                        <img src="2nd.jpeg" alt="معرض 2024" class="event-image">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="event-content">
+                            <div class="event-year" data-ar="2024" data-en="2024">2024</div>
+                            <div class="event-title" data-ar="النسخة الثانية - معرض الابتكار والشركات الناشئة" data-en="The Second Edition - Innovation Exhibition">النسخة الثانية - معرض الابتكار والشركات الناشئة</div>
+                            <p data-ar="عرض متخصص جمع بين روّاد الأعمال والمستثمرين في منصة واحدة. قدمت أكثر من 30 شركة ناشئة مشاريعها أمام استثمارات محتملة وشركاء استراتيجيين." 
+                               data-en="A specialized exhibition that brought together entrepreneurs and investors on one platform. More than 30 startups presented their projects to potential investors and strategic partners.">عرض متخصص جمع بين روّاد الأعمال والمستثمرين في منصة واحدة. قدمت أكثر من 30 شركة ناشئة مشاريعها أمام استثمارات محتملة وشركاء استراتيجيين.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- النسخة الأولى -->
+            <div class="event-card">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <img src="https://www.binbin.tech/wp-content/uploads/2024/10/blog-1-28.jpg" alt="قمة 2023" class="event-image">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="event-content">
+                            <div class="event-year" data-ar="2023" data-en="2023">2023</div>
+                            <div class="event-title" data-ar="النسخة الأولى - إطلاق منتدى الابتكار والاستثمار العربي" data-en="The First Edition - Launch Event">النسخة الأولى - إطلاق منتدى الابتكار والاستثمار العربي</div>
+                            <p data-ar="بدأت الرحلة بالنسخة الأولى من المنتدى بحضور قيادات من عدة دول عربية. أطلقت البرامج الأولى لتأهيل رواد الأعمال والشباب المبدع بدعم من المؤسسات الحكومية والخاصة." 
+                               data-en="The journey began with the first edition of the forum with attendance from leaders of several Arab countries. Initial programs were launched to qualify entrepreneurs and creative youth with support from government and private institutions.">بدأت الرحلة بالنسخة الأولى من المنتدى بحضور قيادات من عدة دول عربية. أطلقت البرامج الأولى لتأهيل رواد الأعمال والشباب المبدع بدعم من المؤسسات الحكومية والخاصة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p data-ar="&copy; 2025 منتدى الابتكار والاستثمار العربي - جميع الحقوق محفوظة" data-en="&copy; 2025 Arab Innovation and Investment Forum - All Rights Reserved">&copy; 2025 منتدى الابتكار والاستثمار العربي - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Counting Animation for Statistics
+        document.addEventListener('DOMContentLoaded', function() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            statNumbers.forEach(element => {
+                const targetText = element.getAttribute('data-ar') || element.getAttribute('data-en');
+                const targetNumber = parseInt(targetText) || parseInt(element.textContent);
+                
+                if (!isNaN(targetNumber)) {
+                    let currentNumber = 0;
+                    const increment = Math.ceil(targetNumber / 50);
+                    const interval = setInterval(() => {
+                        currentNumber += increment;
+                        if (currentNumber >= targetNumber) {
+                            element.textContent = targetText;
+                            clearInterval(interval);
+                        } else {
+                            element.textContent = currentNumber;
+                        }
+                    }, 30);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
