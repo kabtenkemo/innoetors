@@ -17,35 +17,34 @@
 </head>
 <body>
 
- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="logo-dark.webp" 
-                 alt="لوجو Innovest - ملتقى الابتكار والاستثمار العربي" 
-                 class="logo-img img-fluid"
-                 >
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
-                <li class="nav-item"><a class="nav-link" href="competition.html" data-ar="المسابقة" data-en="Competition">المسابقة</a></li>
-                <li class="nav-item"><a class="nav-link" href="exhibition.html" data-ar="المعرض" data-en="Exhibition">المعرض</a></li>
-                <li class="nav-item"><a class="nav-link" href="speakers.html" data-ar="المتحدثون" data-en="Speakers">المتحدثون</a></li>
-                <li class="nav-item"><a class="nav-link" href="events.html" data-ar="أحداثنا السابقة" data-en="Past Events">أحداثنا السابقة</a></li>
-                <li class="nav-item"><a class="nav-link" href="agenda.html" data-ar="الأجندة" data-en="Agenda">الأجندة</a></li>
-                <li class="nav-item"><a class="nav-link" href="partners.html" data-ar="الشركاء والداعمين" data-en="Partners & Supporters">الشركاء والداعمين</a></li>
-                <li class="nav-item"><a class="nav-link" href="ai-forum.html" data-ar="ملتقى الذكاء الاصطناعي" data-en="AI Forum">ملتقى الذكاء الاصطناعي</a></li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item"><button class="btn-toggle me-3" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
-                <li class="nav-item"><button class="btn btn-outline-light" id="langToggle">English</button></li>
-            </ul>
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo-dark.webp" alt="لوجو Innovest" class="logo-img img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="competition.html" data-ar="المسابقة" data-en="Competition">المسابقة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="exhibition.html" data-ar="المعرض" data-en="Exhibition">المعرض</a></li>
+                    <li class="nav-item"><a class="nav-link" href="speakers.html" data-ar="المتحدثون" data-en="Speakers">المتحدثون</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html" data-ar="أحداثنا السابقة" data-en="Past Events">أحداثنا السابقة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="agenda.html" data-ar="الأجندة" data-en="Agenda">الأجندة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partners.html" data-ar="الشركاء والداعمين" data-en="Partners & Supporters">الشركاء والداعمين</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tv-program.html" data-ar="البرنامج التلفزيوني" data-en="TV Program">البرنامج التلفزيوني</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><button class="btn-toggle me-3" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+                    <li class="nav-item"><button class="btn btn-outline-light" id="langToggle">English</button></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     
 
@@ -67,6 +66,73 @@
         </div>
     </div>
 
+<!-- فيديوهين في سلايدر مع controls بدون تداخل مع أزرار التنقل -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title" data-ar="فيديوهات المنتدى" data-en="Forum Videos">فيديوهات المنتدى</h2>
+        
+        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="15000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Video 1"></button>
+                <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1" aria-label="Video 2"></button>
+            </div>
+            
+            <div class="carousel-inner rounded shadow overflow-hidden position-relative">
+                <!-- الفيديو الأول -->
+                <div class="carousel-item active">
+                    <div class="ratio ratio-16x9">
+                        <video class="w-100 h-100" controls controlsList="nodownload" playsinline preload="metadata">
+                            <source src="bromo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </source>
+                        </video>
+                    </div>
+                </div>
+                
+                <!-- الفيديو الثاني -->
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <video class="w-100 h-100" controls controlsList="nodownload" playsinline preload="metadata" >
+                            <source src="jourdn.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </source>
+                        </video>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أزرار التنقل مرفوعة فوق الـ controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev" style="width: 8%; top: 40%; bottom: 40%; opacity: 0.8;">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next" style="width: 8%; top: 40%; bottom: 40%; opacity: 0.8;">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript صغير لمنع تداخل الضغط على controls مع أزرار السلايدر -->
+<script>
+    document.querySelectorAll('video').forEach(video => {
+        video.addEventListener('click', function(e) {
+            e.stopPropagation(); // يمنع الضغط من الوصول للسلايدر
+        });
+        
+        // منع الضغط على عناصر الـ controls من تفعيل الانتقال
+        video.querySelectorAll('button, input[type="range"]').forEach(control => {
+            control.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            control.addEventListener('mousedown', function(e) {
+                e.stopPropagation();
+            });
+        });
+    });
+</script>
+
     <section class="py-5" id="about">
         <div class="container">
             <h2 class="section-title text-center mb-5" data-ar="من نحن" data-en="About Us">من نحن</h2>
@@ -74,7 +140,7 @@
             <!-- رؤيتنا وأهدافنا -->
             <div class="about-card">
                 <div class="row g-0">
-                    <div class="col-lg-6"><img src="https://petra.gov.jo/upload/1761579502111.jpg" class="img-fluid about-img" alt="قمة الابتكار للشباب العربي"></div>
+                    <div class="col-lg-6"><img src="speaker1.jpeg" class="img-fluid about-img" alt="قمة الابتكار للشباب العربي"></div>
                     <div class="col-lg-6 p-5 d-flex align-items-center">
                         <div>
                             <h3 class="text-danger" data-ar="رؤيتنا وأهدافنا" data-en="Our Vision and Goals">رؤيتنا وأهدافنا</h3>
@@ -91,7 +157,7 @@ The forum was launched to be an effective link between entrepreneurs, innovators
        <!-- محطاتنا المفصلية -->
             <div class="about-card">
                 <div class="row g-0 flex-row-reverse">
-                    <div class="col-lg-6"><img src="UN.jpeg" class="img-fluid about-img" alt="مقر جامعة الدول العربية"></div>
+                    <div class="col-lg-6"><img src="background.jpeg" class="img-fluid about-img" alt="مقر جامعة الدول العربية"></div>
                     <div class="col-lg-6 p-5 d-flex align-items-center">
                         <div>
                             <h3 class="text-danger" data-ar="محطاتنا المفصلية" data-en="Our Milestone Events">محطاتنا المفصلية</h3>
@@ -107,7 +173,7 @@ The third edition achieved tangible success, including organizing unique events,
             <!-- برامجنا ومبادراتنا -->
             <div class="about-card">
                 <div class="row g-0">
-                    <div class="col-lg-6"><img src="https://startupqatar.qa/storage/276/643e9b2c687d7_Hannover_1320X500.jpg" class="img-fluid about-img" alt="رواد أعمال عرب في معرض startups"></div>
+                    <div class="col-lg-6"><img src="who 3.jpeg" class="img-fluid about-img" alt="رواد أعمال عرب في معرض startups"></div>
                     <div class="col-lg-6 p-5 d-flex align-items-center">
                         <div>
                             <h3 class="text-danger" data-ar="برامجنا ومبادراتنا" data-en="Our Programs and Initiatives">برامجنا ومبادراتنا</h3>
@@ -120,7 +186,7 @@ The third edition achieved tangible success, including organizing unique events,
             <!-- محاورنا الاستراتيجية -->
             <div class="about-card">
                 <div class="row g-0 flex-row-reverse">
-                    <div class="col-lg-6"><img src="https://www.binbin.tech/wp-content/uploads/2024/10/blog-1-28.jpg" class="img-fluid about-img" alt="تقنيات خضراء في العالم العربي"></div>
+                    <div class="col-lg-6"><img src="who 4.jpeg" class="img-fluid about-img" alt="تقنيات خضراء في العالم العربي"></div>
                     <div class="col-lg-6 p-5 d-flex align-items-center">
                         <div>
                             <h3 class="text-danger" data-ar="محاورنا الاستراتيجية" data-en="Our Strategic Focus Areas">محاورنا الاستراتيجية</h3>
@@ -133,7 +199,7 @@ The third edition achieved tangible success, including organizing unique events,
             <!-- رؤيتنا التوسعية -->
             <div class="about-card">
                 <div class="row g-0">
-                    <div class="col-lg-6"><img src="https://economymiddleeast.com/wp-content/uploads/2025/10/Gitex-Global.jpg" class="img-fluid about-img" alt="معرض GITEX في دبي"></div>
+                    <div class="col-lg-6"><img src="who 5.jpeg" class="img-fluid about-img" alt="معرض GITEX في دبي"></div>
                     <div class="col-lg-6 p-5 d-flex align-items-center">
                         <div>
                             <h3 class="text-danger" data-ar="رؤيتنا التوسعية" data-en="Our Expansion Vision">رؤيتنا التوسعية</h3>
